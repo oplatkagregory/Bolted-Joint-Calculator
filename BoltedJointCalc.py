@@ -2,7 +2,6 @@ import numpy as np
 import math as ma
 import matplotlib.pyplot as plt
 import streamlit as st
-import pandas as pd
 
 st.set_page_config(page_title="Joint Calculator", page_icon="⚙️")
 st.title("🔩 Bolted Joint Calculator")
@@ -324,15 +323,15 @@ elif st.session_state.step == 4:
 
     st.subheader("Summary of Inputs")
 
-    st.table(pd.DataFrame(inputs))
+    st.table(inputs)
 
     st.write("Bolt Material: " + boltMaterial)
 
-    st.table(pd.DataFrame(memberProps))
+    st.table(memberProps)
 
     st.subheader("Summary of Outputs")
 
-    st.table(pd.DataFrame(outputs))
+    st.table(outputs)
 
     # data = st.session_state.user_data
     # st.json(data)
